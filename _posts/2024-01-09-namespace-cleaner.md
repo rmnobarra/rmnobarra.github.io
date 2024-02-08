@@ -423,4 +423,12 @@ Feel free to reach out to me on social media: [twitter](https://twitter.com/rmno
 
 You can also email me directly at rmnobarra@gmail.com. 
 
+## Support
+
+Did you really enjoy my content? Consider buying me a coffee through my Bitcoin wallet: 
+
+Bitcoin Wallet: `3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT`
+
+[![Donate with Bitcoin](https://img.shields.io/badge/Doar%20com-Bitcoin-orange)](bitcoin:3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT)
+
 Bye!

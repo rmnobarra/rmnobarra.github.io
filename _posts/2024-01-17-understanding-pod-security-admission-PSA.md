@@ -6,7 +6,7 @@ categories: [kubernetes]
 tags: [kubernetes]
 ---
 
-## Introdution
+## Introduction
 
 Running a container inside a pod without restrictions or isolation in a production environment can be dangerous. Fortunately, Kubernetes offers many ways to achieve isolation and governance within a cluster. There are more complex and flexible options (like OPA), and there are also simpler methods that I believe are good starting points, such as Pod Security Admission (PSA), which fits this description.
 
@@ -166,6 +166,14 @@ Feel free to reach out to me on social media: [twitter](https://twitter.com/rmno
 ,[linkedin](https://www.linkedin.com/in/rmnobarra/) and [github](https://github.com/rmnobarra).
 
 You can also email me directly at rmnobarra@gmail.com. 
+
+## Support
+
+Did you really enjoy my content? Consider buying me a coffee through my Bitcoin wallet: 
+
+Bitcoin Wallet: `3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT`
+
+[![Donate with Bitcoin](https://img.shields.io/badge/Doar%20com-Bitcoin-orange)](bitcoin:3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT)
 
 Bye!
 

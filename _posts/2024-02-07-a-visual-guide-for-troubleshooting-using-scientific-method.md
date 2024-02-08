@@ -6,7 +6,7 @@ categories: [troubleshooting]
 tags: [troubleshooting]
 ---
 
-## Introdution
+## Introduction
 
 Troubleshooting is an art form, part empirical, part handmade. The truth is, every sysadmin must evolve, for better or worse. Typically, a sysadmin learns to troubleshoot after enduring much pain, often staying up all night in a war room, dealing with an irate customer on the line yelling because the system is down, or perhaps after a catastrophic deployment in production on Friday at 6:00 PM. All these experiences contribute to their growth. But as the old saying goes, "A smart person learns from their problems; a wise person learns from others' problems." This is where the scientific method comes in. Is there a workflow that can systematize a troubleshooting approach? The good news is, yes, there is.
 
@@ -62,6 +62,14 @@ Feel free to reach out to me on social media: [twitter](https://twitter.com/rmno
 ,[linkedin](https://www.linkedin.com/in/rmnobarra/) and [github](https://github.com/rmnobarra).
 
 You can also email me directly at rmnobarra@gmail.com. 
+
+## Support
+
+Did you really enjoy my content? Consider buying me a coffee through my Bitcoin wallet: 
+
+Bitcoin Wallet: `3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT`
+
+[![Donate with Bitcoin](https://img.shields.io/badge/Doar%20com-Bitcoin-orange)](bitcoin:3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT)
 
 Bye!
 

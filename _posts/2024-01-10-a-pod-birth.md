@@ -10,7 +10,7 @@ tags: [kubernetes]
 
 This post assumes a basic understanding of core Kubernetes concepts, such as kubelet, CRI, and so on. It also assumes the use of Kubernetes version 1.18.2 and containerd 1.3.4.
 
-## Introdution
+## Introduction
 
 Starting and killing pods are common events that happen hundreds of times every day in a healthy Kubernetes environment, reminiscent of the Circle of Life in "The Lion King."
 
@@ -63,4 +63,11 @@ Feel free to reach out to me on social media: [twitter](https://twitter.com/rmno
 
 You can also email me directly at rmnobarra@gmail.com. 
 
+## Support
+
+Did you really enjoy my content? Consider buying me a coffee through my Bitcoin wallet: 
+
+Bitcoin Wallet: `3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT`
+
+[![Donate with Bitcoin](https://img.shields.io/badge/Doar%20com-Bitcoin-orange)](bitcoin:3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT)
 Bye!

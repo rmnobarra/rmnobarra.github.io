@@ -6,7 +6,7 @@ categories: [docker]
 tags: [docker]
 ---
 
-## Introdution
+## Introduction
 
 Containers are a staple in the cloud-native era, and they result from a series of instructions within a file, namely a Dockerfile.
 
@@ -122,6 +122,14 @@ Feel free to reach out to me on social media: [twitter](https://twitter.com/rmno
 ,[linkedin](https://www.linkedin.com/in/rmnobarra/) and [github](https://github.com/rmnobarra).
 
 You can also email me directly at rmnobarra@gmail.com. 
+
+## Support
+
+Did you really enjoy my content? Consider buying me a coffee through my Bitcoin wallet: 
+
+Bitcoin Wallet: `3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT`
+
+[![Donate with Bitcoin](https://img.shields.io/badge/Doar%20com-Bitcoin-orange)](bitcoin:3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT)
 
 Bye!
 
