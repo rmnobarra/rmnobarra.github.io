@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Accidental Complexity, Essential Complexity, Hofstadter and Parkinson laws and why we fail to estimate things"
+title: "Accidental & Essential Complexity, Hofstadter's and Parkinson's laws and why we fail to estimate things"
 date: 2024-02-15 13:00:00
 categories: [article]
 tags: [article]
