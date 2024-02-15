@@ -169,11 +169,23 @@ You can also email me directly at rmnobarra@gmail.com.
 
 ## Support
 
-Did you really enjoy my content? Consider buying me a coffee through my Bitcoin wallet: 
+Did you really enjoy my content? Consider buying me a coffee through my Bitcoins wallets: 
 
-Bitcoin Wallet: `3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT`
+![Donate with Bitcoin](https://img.shields.io/badge/Donate%20with-Bitcoin-orange)
 
-[![Donate with Bitcoin](https://img.shields.io/badge/Doar%20com-Bitcoin-orange)](bitcoin:3GzvpHGd22HDbpnaZjU57jFT6ptXqNrGmT)
+Bitcoin Wallet:
+
+`bc1quuv5hml9fjkf7azgwkt4xp867pzdwzyga33qmj`
+
+![Bitcoin wallet QRCODE](https://rmnobarradev.blob.core.windows.net/rmnobarradev/bItcoin-address.png)
+
+![Donate through Lightning Network](https://img.shields.io/badge/Donate%20with-Lighting-blue)
+
+Lighting Address: 
+
+`lnbc1pjue6mkpp5yj737e7fm6efhlj6sns42a875pmkencqmvdshf4ghlnntaet5llsdqqcqzzsxqrrsssp5d9hxl686w839qkwmkm0m30cf5gp4gnzxh68kss393xqzlsg0wr3q9qyyssqp3933zc3fg46nk3vafh63r3lqd0jn2p04w5xrz77h33rrr3xm7ckegg6s2ss64g4rf4jg87zdjzkl5tup7umqpghy2qnk65tqzsnplcpwv6z4c`
+
+![Lighting wallet QRCODE](https://rmnobarradev.blob.core.windows.net/rmnobarradev/lighting-address.png)
 
 Bye!
 
