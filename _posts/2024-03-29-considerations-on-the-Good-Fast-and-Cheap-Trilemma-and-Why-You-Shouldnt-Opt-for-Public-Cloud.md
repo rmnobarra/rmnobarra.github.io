@@ -26,7 +26,9 @@ How the Trilemma Impacts the Use of Public Cloud
 The pursuit of the cloud, aiming for economy, agility, and quality, often fails in practice, as the dynamics establish that it's impossible to fully achieve these three characteristics:
 
 Good: The cloud offers numerous benefits, but it's crucial that the company is prepared, both technically and culturally. It's necessary to question: Do we really need the cloud? Is there a plan B if the on-premises environment becomes unavailable? Is the cost of downtime tolerable within a certain period?
+
 Fast: Migrating or building an environment in the cloud takes time. This process involves planning, building, migrating, and adjustments, and may face challenges, especially with legacy environments.
+
 Cheap: A resilient and fault-tolerant cloud architecture can become very costly as requirements grow. Additionally, operational errors tend to be more common in the cloud, not to mention taxes and currency fluctuations.
 Therefore, adopting a resilient architecture and data storage in the cloud may contradict the goal of cost reduction.
 
