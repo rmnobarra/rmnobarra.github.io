@@ -42,7 +42,9 @@ These are just two examples of how inappropriate use of the cloud can result in 
 
 As mentioned, the cloud is more suitable for applications specifically designed for that environment. Depending on the workload and requirements, a monolithic on-premises application can serve customers well for a long time. If this text raised questions, know that you are not alone.
 
-A study in the UK showed that 25% of organizations have already migrated part of their workloads back to on-premises environments, mainly due to costs.
+A study in the UK showed that 25% of organizations have already migrated part of their workloads back to on-premises environments, mainly due to costs. And the major reason is:
+
+*"The most common motivator for repatriation I’ve been seeing is cost. In the survey, more than 43% of IT leaders found that moving applications and data from on-premises to the cloud was more expensive than expected. Although not a part of the survey, the cost of operating applications and storing data on the cloud has also been significantly more expensive than most enterprises expected. The cost-benefit analysis of cloud versus on-premises infrastructure varies greatly depending on the organization."* [Source](https://www.infoworld.com/article/3712861/why-companies-are-leaving-the-cloud.html)
 
 ## Conclusion
 
