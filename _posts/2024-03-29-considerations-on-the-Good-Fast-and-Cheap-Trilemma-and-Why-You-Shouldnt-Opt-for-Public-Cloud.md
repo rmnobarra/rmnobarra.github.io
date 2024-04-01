@@ -3,7 +3,7 @@ layout: post
 title: "Considerations on the "Good, Fast, and Cheap" Trilemma and Why You Shouldn't Opt for Public Cloud"
 date: 2024-03-29 10:00:00
 categories: [article, theory]
-tags: [article, theory]
+tags: [article, theory, cloud]
 ---
 
 ## Introduction
