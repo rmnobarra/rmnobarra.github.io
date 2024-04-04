@@ -20,7 +20,7 @@ Transforming IaC into a Technological Product: By delivering a pipeline that abs
 
 And more, a lot of more...
 
-![terraoform with github](https://rmnobarradev.blob.core.windows.net/rmnobarradev/broken_window.png)
+![Azure with Terraform using Github Actions](https://rmnobarradev.blob.core.windows.net/rmnobarradev/azure-github.png)
 
 ## Lets begun
 

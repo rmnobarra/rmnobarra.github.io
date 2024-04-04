@@ -14,6 +14,8 @@ A strong influencer in the choice of cloud are the financial incentives that pro
 
 Introducing the "good, fast, and cheap" trilemma can help us understand why this might not be the best choice.
 
+!["good, fast, and cheap" trilemma](https://rmnobarradev.blob.core.windows.net/rmnobarradev/running-cloud.png)
+
 ## The Trilemma
 
 The "fast, good, and cheap" trilemma is a widely recognized principle in project management, business, engineering, and other areas that deal with production and services. According to this principle, you can only choose two out of the three available options: to do something fast, well, or cheaply. This concept simplifies the illustration of inevitable trade-offs in decision-making. Let's see how each element interacts:
