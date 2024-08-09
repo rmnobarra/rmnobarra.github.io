@@ -2,8 +2,8 @@
 layout: post
 title: "Considerations on System Design"
 date: 2024-08-09 20:00:00
-categories: [article, system design]
-tags: [article, system design]
+categories: [article]
+tags: [article]
 ---
 
 ## Introduction
