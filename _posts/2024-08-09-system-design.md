@@ -89,7 +89,7 @@ The architectural process can be summarized in the following diagram:
 
 ![Architectural process](https://rmnobarradev.blob.core.windows.net/rmnobarradev/architectural_process.png)
 
-**Architectural Process Stages**
+## Architectural Process Stages
 
 ### Architectural Analysis:
 
@@ -151,19 +151,31 @@ During the evaluation phase of the architectural process, effective communicatio
 
 **Diagrams**
 
-Diagramming tools such as draw.io and Excalidraw are very effective for creating visual representations of the architecture. These tools allow architects to document different views of the architecture, each addressing the specific concerns of various stakeholders.
+Diagramming tools such as draw.io and Excalidraw are very effective for creating visual representations of the architecture. These tools allow architects to document different views of the architecture, each addressing the specific concerns of various stakeholders. Here two awesome tools to build diagrams:
+
+[Excalidraw](https://excalidraw.com/)
+
+[Drawio](https://app.diagrams.net/)
 
 **Whiteboarding**
 
 Whiteboarding is a valuable technique for group discussions and architectural reviews, especially during the evaluation phase. It enables real-time brainstorming and collaboration between architects and stakeholders, facilitating the identification of potential issues and validation of design decisions.
 
+Here a cool example about it: [Whiteboard with an SA: AWS Code Deployment](https://aws.amazon.com/pt/blogs/publicsector/whiteboard-with-an-sa-aws-code-deployment/)
+
 **Architecture Decision Records (ADR)**
 
 ADRs are documents that record significant architectural decisions made during the design process. They provide a traceable history of the rationale behind architectural choices, aiding in the understanding and maintenance of the architecture over time. Each ADR typically captures the context of the decision, the alternatives considered, the decision made, and its implications.
 
+[ADR Repositories](https://github.com/joelparkerhenderson/architecture-decision-record)
+
 **Cloud Provider Cost Calculators**
 
 Cloud provider cost calculators are tools used to assess the financial implications of architectural decisions, particularly when considering cloud computing platforms. However, beyond tools and techniques, it's important to consider quality attributes and non-functional requirements that directly impact the success of a software system.
+
+[AWS Calculator](https://calculator.aws/#/)
+
+[Azure Calculator](https://azure.microsoft.com/en-us/pricing/calculator/?)
 
 **Proof of Concept (PoC)**
 
@@ -192,6 +204,7 @@ Architecture, as the link between requirements and system, must be conceived wit
 Let's consider an e-commerce system with the following requirements:
 
 **Functional**: Product catalog management, shopping cart, order processing.
+
 **Non-Functional**: High availability, transaction security, fast response time.
 
 Implementation:
@@ -207,7 +220,9 @@ always available.
 
 ## Constraints During the Architectural Process in Software Engineering
 
-Creating an effective software architecture is akin to navigating a maze of complex decisions. Each decision entails accepting constraints that shape the resulting system. Far from being undesirable obstacles, constraints in the architectural process act as guides that direct decisions towards achieving the system's goals, balancing functional and non-functional requirements (quality).
+Creating an effective software architecture is akin to navigating a maze of complex decisions. Each decision entails accepting constraints that shape the resulting system. 
+
+Far from being undesirable obstacles, constraints in the architectural process act as guides that direct decisions towards achieving the system's goals, balancing functional and non-functional requirements (quality).
 
 ### Sources of Constraints
 
@@ -315,15 +330,21 @@ Although it is common to omit one or more parts of the scenario, especially in t
 
 By using quality attribute scenarios, the development team can ensure that the system not only functions as expected but also meets the stakeholders' needs in terms of performance, security, usability, and other attributes raised during the architectural process.
 
-So far, we have understood how the architectural synthesis process works, resulting in a valid and implementable architecture. We also understand the importance of non-functional requirements as a means to realize functional requirements, and we have seen that these non-functional requirements have behaviors, with sources, stimuli, environments, etc.
+So far, we have understood how the architectural synthesis process works, resulting in a valid and implementable architecture. 
 
-We have a solid foundation so far, knowing what the needs are and what to do, using a systematic approach. Now is the time to learn ways to materialize these quality attributes in the real world, and for that, there is also a process, or rather, a tactic.
+We also understand the importance of non-functional requirements as a means to realize functional requirements, and we have seen that these non-functional requirements have behaviors, with sources, stimuli, environments, etc.
+
+We have a solid foundation so far, knowing what the needs are and what to do, using a systematic approach. 
+
+Now is the time to learn ways to materialize these quality attributes in the real world, and for that, there is also a process, or rather, a tactic.
 
 ## Achieving Quality Attributes through Architectural Patterns and Tactics
 
 A tactic is a design decision that influences the achievement of a quality attribute response and directly affects the system's response to a given stimulus. Tactics can provide portability to one design, high performance to another, and integrability to a third.
 
 ## Availability in Software Architecture
+
+![Availability](https://rmnobarradev.blob.core.windows.net/rmnobarradev/availability_logo.png)
 
 Availability describes a system's ability to be ready to perform its functions when needed. This means that, in addition to functioning correctly, the system must also recover from failures.
 
@@ -357,12 +378,13 @@ A server in a server farm fails during normal operation, and the system notifies
 
 Availability tactics aim to prevent and mitigate the impact of failures, including:
 
-**Failure Prevention**
+### Failure Prevention
 
-Eliminating Single Points of Failure: Implement redundancy to prevent the failure of a single component from causing system unavailability.
-Fault Tolerance: Allow the system to continue operating in a degraded state, even if some components fail.
+**Eliminating Single Points of Failure**: Implement redundancy to prevent the failure of a single component from causing system unavailability.
 
-**Failure Detection**
+**Fault Tolerance**: Allow the system to continue operating in a degraded state, even if some components fail.
+
+### Failure Detection
 
 **Monitoring**: Continuously check the state of system components to quickly detect failures.
 
@@ -370,7 +392,7 @@ Fault Tolerance: Allow the system to continue operating in a degraded state, eve
 
 **Exception Checking**: Detect abnormal conditions during code execution.
 
-**Failure Recovery**
+### Failure Recovery
 
 **Repair**: Correct the cause of the failure and restore the system to its operational state.
 
@@ -380,25 +402,30 @@ Fault Tolerance: Allow the system to continue operating in a degraded state, eve
 
 ## Availability Patterns
 
-Availability patterns are reusable solutions for common design problems related to availability. Some examples include:
+Availability patterns are reusable solutions for common design problems related to availability. Like:
 
-Substitute: Designate a component to take over the responsibilities of a failed component, ensuring the continuity of operation.
+**Substitute**: Designate a component to take over the responsibilities of a failed component, ensuring the continuity of operation.
 
-Scaling: Dynamically adjust system resources in response to changes in demand, maintaining performance and availability.
+**Scaling**: Dynamically adjust system resources in response to changes in demand, maintaining performance and availability.
 
 ## Examples of Technologies, Tools, or Services for Availability
 
 Various technologies and services, both cloud-based and on-premises, as well as open-source, can be used to implement availability patterns:
-Data Redundancy: Databases like Apache Cassandra offer data replication, distributing copies of data across multiple nodes to ensure availability even if one node fails.
 
-Load Balancing: Tools such as HAProxy and NGINX distribute network traffic across multiple servers, preventing overload and increasing 
+**Data Redundancy**: Databases like Apache Cassandra offer data replication, distributing copies of data across multiple nodes to ensure availability even if one node fails.
+
+**Load Balancing**: Tools such as HAProxy and NGINX distribute network traffic across multiple servers, preventing overload and increasing 
 availability.
 
-Virtualization: Virtualization platforms like VMware vSphere and Xen allow the creation of virtual machines (VMs) that can be easily moved and replicated, facilitating redundancy and failure recovery.
+**Virtualization**: Virtualization platforms like VMware vSphere and Xen allow the creation of virtual machines (VMs) that can be easily moved and replicated, facilitating redundancy and failure recovery.
 
 ## Deployability in Software Architecture
 
-Deployability refers to the ability of software to be deployed, i.e., allocated to an environment for execution within predictable and acceptable time and effort. Additionally, if the new deployment does not meet its specifications, it should be reversible, again within predictable and acceptable time and effort.
+![Deployability](https://rmnobarradev.blob.core.windows.net/rmnobarradev/deployability_logo.png)
+
+Deployability refers to the ability of software to be deployed, i.e., allocated to an environment for execution within predictable and acceptable time and effort. 
+
+Additionally, if the new deployment does not meet its specifications, it should be reversible, again within predictable and acceptable time and effort.
 
 ## Scenario for Deployability
 
@@ -406,17 +433,17 @@ A typical deployability scenario might be described as follows:
 
 **Source of Stimulus**: A new version of the software is made available.
 
-Stimulus: The new version needs to be deployed to a production environment.
+**Stimulus**: The new version needs to be deployed to a production environment.
 
-Environment: The production environment may be local, cloud-based, or hybrid.
+**Environment**: The production environment may be local, cloud-based, or hybrid.
 
-Artifact: The new version of the software, including code, configurations, and dependencies.
+**Artifact**: The new version of the software, including code, configurations, and dependencies.
 
-Response: The software is successfully deployed in the production environment.
+**Response**: The software is successfully deployed in the production environment.
 
-Response Measure: Time and effort required to deploy the software, number of errors or issues encountered during deployment, time and effort needed to roll back the deployment if it fails.
+**Response Measure**: Time and effort required to deploy the software, number of errors or issues encountered during deployment, time and effort needed to roll back the deployment if it fails.
 
-Use Case:
+### Use Case:
 
 A new version of an authentication/authorization service (which our product uses) is released in the component marketplace, and the product owner decides to incorporate this version into the product. The new service is tested and deployed in the production environment within 40 elapsed hours and no more than 120 man-hours of effort. The deployment is defect-free and no SLA (Service Level Agreement) is violated.
 
@@ -428,46 +455,47 @@ A new version of an authentication/authorization service (which our product uses
 
 The tactics for deployability aim to ensure that new software or hardware components are deployed within acceptable constraints of time, cost, and quality. Here are some tactics:
 
-Minimize Dependencies: Reducing dependencies between system components simplifies the deployment process and lowers the risk of compatibility issues.
+**Minimize Dependencies**: Reducing dependencies between system components simplifies the deployment process and lowers the risk of compatibility issues.
 
-Manage Components: Use a component management system to track different versions and dependencies of system components.
+**Manage Components**: Use a component management system to track different versions and dependencies of system components.
 
-Automate Deployment: Automate the deployment process to reduce time and effort and minimize the risk of human errors.
+**Automate Deployment**: Automate the deployment process to reduce time and effort and minimize the risk of human errors.
 
-Use Testing Environments: Deploy and test the software in test environments that mirror the production environment to identify and address issues before production deployment.
+**Use Testing Environments**: Deploy and test the software in test environments that mirror the production environment to identify and address issues before production deployment.
 
-Deploy in Phases: Break the deployment into smaller, manageable phases to reduce risk and allow for more frequent testing and validation.
+**Deploy in Phases**: Break the deployment into smaller, manageable phases to reduce risk and allow for more frequent testing and validation.
 
-Monitor Deployment: Monitor the deployment process and production environment to quickly detect and address issues.
-Rollback: Implement a rollback mechanism to quickly revert to the previous version of the software in case of problems.
+**Monitor Deployment**: Monitor the deployment process and production environment to quickly detect and address issues.
+
+**Rollback**: Implement a rollback mechanism to quickly revert to the previous version of the software in case of problems.
 
 ## Deployability Patterns
 
 Several architectural patterns can be used to enhance deployability:
 
-Containers: Enable the creation of self-contained software packages, including all necessary dependencies, which simplifies deployment across different environments.
+**Containers**: Enable the creation of self-contained software packages, including all necessary dependencies, which simplifies deployment across different environments.
 
-Blue/Green Deployment: Involves creating two identical instances of the production environment, one "blue" (currently running) and one "green" (new version). The new version is deployed in the "green" environment, tested, and then traffic is redirected to it.
+**Microservices**: Decomposes a system into independent and autonomous services that can be deployed and scaled independently, increasing flexibility and deployment speed.
 
-Microservices: Decomposes a system into independent and autonomous services that can be deployed and scaled independently, increasing flexibility and deployment speed.
+**Blue/Green Deployment**: Involves creating two identical instances of the production environment, one "blue" (currently running) and one "green" (new version). The new version is deployed in the "green" environment, tested, and then traffic is redirected to it.
 
-Canary Releases: The new version is gradually deployed to a small group of users before being released to everyone.
+**Canary Releases**: The new version is gradually deployed to a small group of users before being released to everyone.
 
-Rolling Updates: The update is performed gradually, replacing old instances with new ones one at a time.
+**Rolling Updates**: The update is performed gradually, replacing old instances with new ones one at a time.
 
 ## Practical Examples of Technologies, Tools, or Services for Deployability
 
 Various technologies, tools, and services can be used to implement deployability patterns and tactics. Here are some examples:
 
-Docker: An open-source platform for creating and managing software containers.
+**Docker**: An open-source platform for creating and managing software containers.
 
-Kubernetes: An open-source platform for automating the deployment, scaling, and management of containerized applications.
+**Kubernetes**: An open-source platform for automating the deployment, scaling, and management of containerized applications.
 
-Jenkins: An open-source continuous integration and continuous delivery (CI/CD) tool for automating the build, test, and deployment process of software.
+**Jenkins**: An open-source continuous integration and continuous delivery (CI/CD) tool for automating the build, test, and deployment process of software.
 
-Terraform: An Infrastructure as Code (IaC) tool that allows for the definition of infrastructure using configuration files.
+**Terraform**: An Infrastructure as Code (IaC) tool that allows for the definition of infrastructure using configuration files.
 
-Ansible: An automation tool that can be used to automate deployment, configuration, and management of systems.
+**Ansible**: An automation tool that can be used to automate deployment, configuration, and management of systems.
 
 ## Energy Efficiency in Software Architecture
 
@@ -475,21 +503,23 @@ The growing concern about energy efficiency in computing systems requires softwa
 
 ## Scenario for Energy Efficiency
 
+![Energy Efficiency](https://rmnobarradev.blob.core.windows.net/rmnobarradev/energy_efficiency_logo.png)
+
 The need for energy efficiency arises when there is a desire to conserve or manage energy consumption without compromising system functionality. A typical scenario might involve:
 
 **Source of Stimulus**: A data center manager concerned with energy costs.
 
-Stimulus: The desire to reduce energy consumption during periods of low demand.
+**Stimulus**: The desire to reduce energy consumption during periods of low demand.
 
-Environment: A cluster of servers in a data center.
+**Environment**: A cluster of servers in a data center.
 
-Artifact: The data center's energy management system.
+**Artifact**: The data center's energy management system.
 
-Response: The system deactivates or puts idle servers into a low-power mode during periods of low demand.
+**Response**: The system deactivates or puts idle servers into a low-power mode during periods of low demand.
 
-Measure of Response: Reduction in the total energy consumption of the data center, measured in kWh.
+**Measure of Response**: Reduction in the total energy consumption of the data center, measured in kWh.
 
-Use Case:
+### Use Case:
 
 A manager aims to save energy during runtime by deallocating unused resources during off-peak periods. The system deallocates resources while 
 maintaining a worst-case latency of 2 seconds for database queries, achieving an average energy savings of 50% of the total required energy.
@@ -498,46 +528,45 @@ maintaining a worst-case latency of 2 seconds for database queries, achieving an
 
 ## Tactics for Energy Efficiency
 
-![Energy Efficiency Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/energy_eficiency_tactics.png)
+![Energy Efficiency Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/energy_efficiency_tactics.png)
 
-Various tactics inspired by other areas, such as performance and availability, can be adapted for energy efficiency. Some of these include:
+Various tactics inspired by other areas, such as performance and availability, can be adapted for energy efficiency:
 
-Resource Management: Monitoring and controlling the use of resources like CPU, memory, disk, and network.
+**Resource Management**: Monitoring and controlling the use of resources like CPU, memory, disk, and network.
 
-Reducing Resource Demand: Optimizing algorithms and data structures to minimize resource usage.
+**Reducing Resource Demand**: Optimizing algorithms and data structures to minimize resource usage.
 
-Adjusting Performance: Finding a balance between performance and energy consumption.
+**Adjusting Performance**: Finding a balance between performance and energy consumption.
 
-Using Efficient Hardware: Choosing hardware with better energy efficiency.
+**Using Efficient Hardware**: Choosing hardware with better energy efficiency.
 
-Turning Off Inactive Resources: Deactivating components or subsystems that are not in use.
+**Turning Off Inactive Resources**: Deactivating components or subsystems that are not in use.
 
 ## Energy Efficiency Patterns
 
-Design patterns provide repeatable solutions to common problems in software design. For energy efficiency, key patterns include:
+Design patterns provide repeatable solutions to common problems in software design:
 
-Green Computing: Designing systems with a focus on minimizing energy consumption during operation.
+**Green Computing**: Designing systems with a focus on minimizing energy consumption during operation.
 
-Virtualization: Using virtual machines to consolidate servers and improve resource utilization.
+**Virtualization**: Using virtual machines to consolidate servers and improve resource utilization.
 
-Thin Provisioning: Allocating storage resources dynamically and as needed.
+**Thin Provisioning**: Allocating storage resources dynamically and as needed.
 
 ## Practical Examples of Technologies, Tools, or Services for Energy Efficiency
 
 Several technologies, tools, and services can be used to implement the energy efficiency tactics mentioned:
 
-Cloud Computing:
-AWS Lambda: Allows you to run code without provisioning or managing servers, paying only for the compute time used, which can contribute to energy efficiency.
+**AWS Lambda**: Allows you to run code without provisioning or managing servers, paying only for the compute time used, which can contribute to energy efficiency.
 
-Google Cloud Run: Similar to AWS Lambda, it runs managed containers in a scalable manner with pay-as-you-go billing.
+**Google Cloud Run**: Similar to AWS Lambda, it runs managed containers in a scalable manner with pay-as-you-go billing.
 
-Open Source:
-Kubernetes with Cluster Autoscaler: Container orchestration that automatically adjusts the number of pods based on workload, saving energy.
-Prometheus: A monitoring platform that can be used to track energy consumption metrics.
+**Kubernetes with Cluster Autoscaler**: Container orchestration that automatically adjusts the number of pods based on workload, saving energy.
 
-On-Premises:
-Virtualization: Allows multiple applications to be consolidated on a single physical server, optimizing hardware usage.
-Energy Management Tools: Software that enables configuring energy-saving policies on servers and desktops.
+**Prometheus**: A monitoring platform that can be used to track energy consumption metrics.
+
+**Virtualization**: Allows multiple applications to be consolidated on a single physical server, optimizing hardware usage.
+
+**Energy Management Tools**: Software that enables configuring energy-saving policies on servers and desktops.
 
 ## Integrability in Software Architecture
 
@@ -545,9 +574,26 @@ Integrability goes beyond simply making separate software components work togeth
 
 ## Scenario for Integrability
 
+![Integrability](https://rmnobarradev.blob.core.windows.net/rmnobarradev/integrability_logo.png)
+
 Imagine a supply chain management system that needs to integrate data from multiple suppliers, each with their own systems and data formats. Efficient and cost-effective integration is crucial for the success of the system, allowing for unified views, process automation, and optimized decision-making.
 
-Use Case:
+A typical scenario looks like:
+
+**Stimulus Source**: A growing e-commerce company needs to integrate its electronic invoicing (NF-e) system with its backoffice system to automate order processing and improve efficiency.
+
+**Stimulus**: The need to integrate the NF-e system with the backoffice system to automate the workflow.
+
+**Environment**: The company's IT infrastructure, where the NF-e system and the backoffice system operate.
+
+**Artifact**: The company's integrated management system, combining the NF-e and backoffice systems.
+
+**Response**: The NF-e system is integrated with the backoffice system using a messaging service. This service acts as an intermediary, allowing the two systems to share data asynchronously and reliably.
+
+**Response Measure**: Time required to integrate the systems, integration cost, and reduction in manual errors in order processing.
+
+### Use Case
+
 A new data filtering component has become available on the component market. The new component is integrated into the system and deployed within 1 month, with a maximum of 1 person-month of effort.
 
 ![Integrability Cenario](https://rmnobarradev.blob.core.windows.net/rmnobarradev/integrability_cenario.png)
@@ -558,37 +604,39 @@ A new data filtering component has become available on the component market. The
 
 The tactics for integrability aim to minimize the challenges of connecting different software components, focusing on:
 
-Minimize Dependencies: Limit dependencies between components to reduce the impact of changes and promote reuse.
+**Minimize Dependencies**: Limit dependencies between components to reduce the impact of changes and promote reuse.
 
-Abstract Interactions: Define clear and concise interfaces to facilitate communication between components, hiding implementation details.
+**Abstract Interactions**: Define clear and concise interfaces to facilitate communication between components, hiding implementation details.
 
-Manage Data: Implement efficient mechanisms for data translation, transformation, and synchronization between components.
+**Manage Data**: Implement efficient mechanisms for data translation, transformation, and synchronization between components.
 
-Orchestrate Interactions: Establish clear workflows and control mechanisms to ensure effective communication and collaboration between components.
+**Orchestrate Interactions**: Establish clear workflows and control mechanisms to ensure effective communication and collaboration between components.
 
 ## Integrability Patterns
 
 Various architectural patterns can facilitate integrability, such as:
 
-Microservices: Decompose the system into independent, loosely coupled services with well-defined responsibilities, simplifying integration and management.
+**Microservices**: Decompose the system into independent, loosely coupled services with well-defined responsibilities, simplifying integration and management.
 
-Message Queues: Enable asynchronous and reliable communication between components, decoupling them and increasing system scalability.
+**Message Queues**: Enable asynchronous and reliable communication between components, decoupling them and increasing system scalability.
 
-APIs (Application Programming Interfaces): Provide standardized interfaces for interacting with components, facilitating integration and the consumption of functionalities.
+**APIs (Application Programming Interfaces)**: Provide standardized interfaces for interacting with components, facilitating integration and the consumption of functionalities.
 
-API Gateways: Consolidate and manage multiple APIs, simplifying integration with external systems.
+**API Gateways**: Consolidate and manage multiple APIs, simplifying integration with external systems.
 
 ## Examples of Technologies, Tools, or Services for Integrability
 
 Tools and services that implement these patterns:
 
-Apache Kafka: An open-source event streaming platform that implements the Message Queues pattern, ideal for integrating microservices and building scalable distributed systems.
+**Apache Kafka**: An open-source event streaming platform that implements the Message Queues pattern, ideal for integrating microservices and building scalable distributed systems.
 
-Kong Gateway: An open-source API gateway that offers routing, transformation, and API management, simplifying integration with external systems and applying security policies.
+**Kong Gateway**: An open-source API gateway that offers routing, transformation, and API management, simplifying integration with external systems and applying security policies.
 
-MuleSoft Anypoint Platform: An Integration Platform as a Service (iPaaS) that provides tools to connect applications, data, and devices in the cloud or on-premises, using various integration patterns.
+**MuleSoft Anypoint Platform**: An Integration Platform as a Service (iPaaS) that provides tools to connect applications, data, and devices in the cloud or on-premises, using various integration patterns.
 
 ## Modifiability in Software Architecture
+
+![Modifiability](https://rmnobarradev.blob.core.windows.net/rmnobarradev/modifiability_logo.png)
 
 Modifiability refers to how easily a software system can be altered throughout its lifecycle, accommodating new features, fixing defects, and adapting to new requirements and environments.
 
@@ -596,7 +644,24 @@ Modifiability refers to how easily a software system can be altered throughout i
 
 An e-commerce system that is constantly evolving needs to adapt to market demands, such as new payment methods, integrations with marketplaces, and customized features for users. The system's architecture should support rapid implementation of these changes without compromising the platform's stability and performance.
 
-Use Case:
+Scenario:
+
+**Stimulus Source**: A logistics company seeking to optimize the operations of its vehicle fleet.
+
+**Stimulus**: The need to adapt the vehicle tracking system to incorporate new types of sensors and actuators, keeping up with technological advancements and demands for more complex information, such as real-time fuel consumption and refrigerated cargo temperature.
+
+**Environment**: The vehicle tracking system operates across a variety of mobile devices (vehicles) with different processing capabilities, unstable network connectivity, and varying power consumption requirements.
+
+**Artifact**: The software system embedded in the mobile devices of the vehicle fleet, responsible for collecting, processing, and transmitting sensor data, as well as receiving and executing actuator commands.
+
+**Response**: The architecture of the tracking system is modified to use a message bus that abstracts communication with sensors and actuators. This abstraction allows new types of sensors and actuators to be added to the system without the need to modify the core application code.
+
+**Response Measure**:
+* Time required to integrate a new type of sensor or actuator: A significant reduction in integration time is expected.
+* Cost of adding new types of sensors and actuators: The cost should be lower due to the reuse of the core application code.
+* Impact on system performance and energy consumption: Performance and energy consumption should not be significantly impacted by the addition of new sensors and actuators.
+
+### Use Case
 
 A developer wants to change the user interface. This change will be made in the code during design time, will take less than three hours to implement and test, and will have no side effects.
 
@@ -606,33 +671,35 @@ A developer wants to change the user interface. This change will be made in the 
 
 ![Modifiability Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/modifiability_tactics.png)
 
-Modifiability tactics aim to facilitate changes to a system, minimizing associated costs and risks. Key tactics include:
+Modifiability tactics aim to facilitate changes to a system, minimizing associated costs and risks:
 
-Reduce Coupling: Limit dependencies between modules so that modifications in one module have minimal impact on others.
+**Reduce Coupling**: Limit dependencies between modules so that modifications in one module have minimal impact on others.
 
-Defer Binding: Allow decisions about specific implementations to be made as late as possible in the development lifecycle, using mechanisms like plugins and external configurations.
+**Defer Binding**: Allow decisions about specific implementations to be made as late as possible in the development lifecycle, using mechanisms like plugins and external configurations.
 
-Abstract Common Services: Identify common functionalities and encapsulate them in reusable modules to avoid code duplication and simplify maintenance.
+**Abstract Common Services**: Identify common functionalities and encapsulate them in reusable modules to avoid code duplication and simplify maintenance.
 
-Encapsulate Variable Parts: Isolate aspects of the system that are likely to change, such as domain-specific algorithms or integrations with external systems, into modules with well-defined interfaces.
+**Encapsulate Variable Parts**: Isolate aspects of the system that are likely to change, such as domain-specific algorithms or integrations with external systems, into modules with well-defined interfaces.
 
 ## Modifiability Patterns
 
-Various architectural patterns can enhance a system's modifiability, including:
+Various architectural patterns can enhance a system's modifiability:
 
-Microservices: Decompose the system into independent, loosely coupled services, allowing them to be modified and deployed individually without affecting other services.
+**Microservices**: Decompose the system into independent, loosely coupled services, allowing them to be modified and deployed individually without affecting other services.
 
-Dependency Injection: Allow dependencies between modules to be provided externally, facilitating component replacement and testing.
+**Dependency Injection**: Allow dependencies between modules to be provided externally, facilitating component replacement and testing.
 
-Aspect-Oriented Programming (AOP): Separate cross-cutting concerns, such as logging and security, from the main code, making the system more modular and easier to modify.
+**Aspect-Oriented Programming (AOP**): Separate cross-cutting concerns, such as logging and security, from the main code, making the system more modular and easier to modify.
 
 ## Practical Examples of Technologies, Tools, or Services for Modifiability
 
-Kubernetes: An open-source container orchestration platform that facilitates the deployment, management, and scaling of microservices-based applications, making updates and modifications more efficient.
+**Kubernetes**: An open-source container orchestration platform that facilitates the deployment, management, and scaling of microservices-based applications, making updates and modifications more efficient.
 
-Spring Framework: A Java framework that provides support for dependency injection and AOP, making applications more modular, testable, and easier to modify.
+**Spring Framework**: A Java framework that provides support for dependency injection and AOP, making applications more modular, testable, and easier to modify.
 
 ## Performance in Software Architecture
+
+![Performance](https://rmnobarradev.blob.core.windows.net/rmnobarradev/performance_logo.png)
 
 Performance, critical for user satisfaction and system success, refers to a system's ability to meet response time demands within a given workload limit.
 
@@ -642,17 +709,18 @@ A typical performance scenario might involve:
 
 **Source of Stimulus**: Hardware failure, traffic peak
 
-Stimulus: Loss of server connection, drastic increase in requests
+**Stimulus**: Loss of server connection, drastic increase in requests
 
-Artifact: The system as a whole, specific component
+**Artifact**: The system as a whole, specific component
 
-Environment: Production, testing environment
+**Environment**: Production, testing environment
 
-Response: Continued operation in degraded mode, automatic recovery
+**Response**: Continued operation in degraded mode, automatic recovery
 
-Measure of Response: Recovery time, number of lost transactions
+**Measure of Response**: Recovery time, number of lost transactions
 
-Use Case:
+### Use Case
+
 Five hundred users initiate 2,000 requests within a 30-second interval during normal operations. The system processes all requests with an average 
 latency of two seconds.
 
@@ -664,71 +732,69 @@ latency of two seconds.
 
 Performance tactics are design strategies used to ensure that a system can respond quickly and handle large volumes of data, such as:
 
-Manage Contended Resources: Limit the use of shared resources like databases and queues to minimize wait times and bottlenecks.
+**Manage Contended Resources**: Limit the use of shared resources like databases and queues to minimize wait times and bottlenecks.
 
-Use Resources Effectively: Reduce resource consumption through techniques such as caching, optimized algorithms, and data compression.
+**Use Resources Effectively**: Reduce resource consumption through techniques such as caching, optimized algorithms, and data compression.
 
-Control Resource Demand: Prioritize critical tasks, limit queues, and use throttling mechanisms to prevent system overload.
+**Control Resource Demand**: Prioritize critical tasks, limit queues, and use throttling mechanisms to prevent system overload.
 
-Keep Concurrency Under Control: Limit the number of concurrent threads and processes to reduce context-switching overhead and resource contention.
+**Keep Concurrency Under Control**: Limit the number of concurrent threads and processes to reduce context-switching overhead and resource contention.
 
 ## Performance Patterns
 
 Various architectural patterns that can enhance performance include:
 
-Divide and Conquer: Break the system into smaller, independent components for parallel processing, reducing overall execution time.
+**Divide and Conquer**: Break the system into smaller, independent components for parallel processing, reducing overall execution time.
 
-Cache: Store frequently accessed data in caches to reduce access to slower resources, such as databases and external services.
+**Cache**: Store frequently accessed data in caches to reduce access to slower resources, such as databases and external services.
 
-Resource Pools: Maintain a set of pre-initialized resources to avoid the overhead of frequent creation and disposal, such as database connections.
+**Resource Pools**: Maintain a set of pre-initialized resources to avoid the overhead of frequent creation and disposal, such as database connections.
 
 ## Practical Examples of Technologies, Tools, or Services for Performance
 
-Cloud Cache Example:
-Amazon ElastiCache: A managed caching service that can be used to improve the performance of web applications by storing frequently accessed data in memory. It supports various caching engines like Redis and Memcached and integrates with other AWS services.
+**Amazon ElastiCache**: A managed caching service that can be used to improve the performance of web applications by storing frequently accessed data in memory. It supports various caching engines like Redis and Memcached and integrates with other AWS services.
 
-On-Premises Microservices Example:
-Spring Boot: A Java framework that facilitates the creation of lightweight, independent microservices. It offers features such as auto-configuration, embedded monitoring, and support for different communication formats like REST and asynchronous messaging.
+**Spring Boot**: A Java framework that facilitates the creation of lightweight, independent microservices. It offers features such as auto-configuration, embedded monitoring, and support for different communication formats like REST and asynchronous messaging.
 
-Open Source Asynchronous Processing Example:
-
-Apache Kafka: A distributed streaming platform that allows for the construction of real-time data pipelines and streaming applications. It 
+**Apache Kafka**: A distributed streaming platform that allows for the construction of real-time data pipelines and streaming applications. It 
 provides high processing capacity and fault tolerance, making it suitable for handling large volumes of data.
 
 ## Considerations on the Attributes of Safety and Security
 
 The quality attributes of safety and security are both critical in software systems, but they address different aspects of system protection and operation. Here’s a look at the differences between these two attributes:
 
-Safety
+### Safety
 
-Definition: Safety refers to a system's ability to operate without causing harm to people, the environment, or other systems, even in the presence of faults or errors. The focus is on preventing accidents and controlling risks.
+**Definition**: Safety refers to a system's ability to operate without causing harm to people, the environment, or other systems, even in the presence of faults or errors. The focus is on preventing accidents and controlling risks.
 
-Security
+### Security
 
-Definition: Security refers to a system's ability to protect data and operations from unauthorized access, malicious attacks, and other threats that could compromise the integrity, confidentiality, and availability of information.
+**Definition**: Security refers to a system's ability to protect data and operations from unauthorized access, malicious attacks, and other threats that could compromise the integrity, confidentiality, and availability of information.
 
 ## Safety in Software Architecture
 
-In software engineering, safety refers to a system's ability to operate without causing harm to people or the environment. The importance of safety in computer-controlled systems has grown exponentially as these systems become increasingly integrated into our lives, from autonomous vehicles to medical devices and industrial control systems. Failures in these systems can have catastrophic consequences, making safety a critical quality to consider from the early stages of software architecture design.
+![Safety](https://rmnobarradev.blob.core.windows.net/rmnobarradev/safety_logo.png)
+
+In software engineering, safety refers to a system's ability to operate without causing harm to people or the environment. The importance of safety in computer-controlled systems has grown exponentially as these systems become increasingly integrated into our lives, from autonomous vehicles to medical devices and industrial control systems. 
+
+Failures in these systems can have catastrophic consequences, making safety a critical quality to consider from the early stages of software architecture design.
 
 ## Safety Scenario
 
-A safety scenario describes a situation where system safety is crucial. It defines:
+A safety scenario describes a situation where system safety is critical. An examples:
 
 **Source of Stimulus**: What triggers the risk situation? (e.g., hardware failure, software error, user action)
 
-Stimulus: What is the nature of the event? (e.g., sensor sends invalid data, software tries to access unallocated memory, user presses the wrong 
+**Stimulus**: What is the nature of the event? (e.g., sensor sends invalid data, software tries to access unallocated memory, user presses the wrong 
 button)
 
-Context: Under what conditions does the event occur? (e.g., system under maximum load, low battery, unstable network connection)
+**Artifact**: Which part of the system is affected? (e.g., control module, user interface, database)
 
-Artifact: Which part of the system is affected? (e.g., control module, user interface, database)
+**Response**: How should the system react to the stimulus? (e.g., safely shut down the system, alert the user, log the event)
 
-Response: How should the system react to the stimulus? (e.g., safely shut down the system, alert the user, log the event)
+**Measure of Response**: How is the effectiveness of the response measured? (e.g., time to shut down, false positive rate of alerts, completeness of the log)
 
-Response Metric: How is the effectiveness of the response measured? (e.g., time to shut down, false positive rate of alerts, completeness of the log)
-
-Use Case:
+### Use Case
 
 An example of a security scenario is: A sensor in the patient monitoring system does not report a critical life value within 100 ms. The failure is logged, a warning light is activated on the console, and a backup (low-fidelity) sensor is triggered. The system monitors the patient using the backup sensor within a maximum of 300 ms.
 
@@ -738,49 +804,54 @@ An example of a security scenario is: A sensor in the patient monitoring system 
 
 ![Safety Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/safety_tactics.png)
 
-Prevention of Unsafe States:
+### Prevention of Unsafe States:
 
-Substitution: Replaces software components prone to failure with more robust hardware alternatives, such as watchdogs and interlocks.
+**Substitution**: Replaces software components prone to failure with more robust hardware alternatives, such as watchdogs and interlocks.
 Maintain Safe State: Implements mechanisms to ensure the system remains in a safe state even in case of failures, such as hardware and software redundancy, fault tolerance mechanisms, and rigorous data validation.
 
-Detection of Unsafe States:
-Fault Detection: Continuously monitors the system to identify and signal faults, using techniques like code checks, heartbeat monitoring, and deadlock detection mechanisms.
+### Detection of Unsafe States:
 
-Containment and Recovery:
-Fault Containment: Isolates faults to prevent them from spreading throughout the system, using techniques like firewalls, sandboxes, and compartmentalization.
-Fault Recovery: Implements mechanisms to restore the system to a safe operational state after a fault, such as transaction rollbacks, fallback mechanisms, and system rebooting.
+**Fault Detection**: Continuously monitors the system to identify and signal faults, using techniques like code checks, heartbeat monitoring, and deadlock detection mechanisms.
+
+### Containment and Recovery:
+
+**Fault Containment**: Isolates faults to prevent them from spreading throughout the system, using techniques like firewalls, sandboxes, and compartmentalization.
+
+**Fault Recovery**: Implements mechanisms to restore the system to a safe operational state after a fault, such as transaction rollbacks, fallback mechanisms, and system rebooting.
 
 ## Safety Patterns
 
 Safety patterns are reusable and proven design solutions for achieving safety in various contexts. One such pattern is "Separate Safety," which involves dividing the system into safety-critical and non-safety-critical parts.
 
-Advantages:
+### Advantages:
 
-Simplified Certification: Allows certification of only the safety-critical parts, reducing costs and time.
+**Simplified Certification**: Allows certification of only the safety-critical parts, reducing costs and time.
 
-Fault Isolation: Reduces the risk of failures in non-critical components affecting the overall safety of the system.
+**Fault Isolation**: Reduces the risk of failures in non-critical components affecting the overall safety of the system.
 
 ## Practical Examples of Technologies, Tools, or Services for Safety
 
-Cloud:
-AWS IoT Greengrass: Enables deploying and running code locally on IoT devices, including security features such as device authentication and data encryption.
+**AWS IoT Greengrass**: Enables deploying and running code locally on IoT devices, including security features such as device authentication and data encryption.
 
-Open Source:
-Robot Operating System (ROS): A flexible framework for writing robotics software, including tools and libraries for developing secure robotic systems.
-Ardupilot: An open-source system for unmanned aerial vehicles (UAVs), which includes safety features such as geofencing and onboard safety modes.
+**Robot Operating System (ROS)**: A flexible framework for writing robotics software, including tools and libraries for developing secure robotic systems.
 
-On-Premises:
-Programmable Logic Controllers (PLCs) with Redundancy: Used in industrial automation, these controllers can be configured in redundant pairs to ensure safety in case of failure of one of the controllers.
+**Ardupilot**: An open-source system for unmanned aerial vehicles (UAVs), which includes safety features such as geofencing and onboard safety modes.
+
+**Programmable Logic Controllers (PLCs) with Redundancy**: Used in industrial automation, these controllers can be configured in redundant pairs to ensure safety in case of failure of one of the controllers.
 
 ## Security in Software Architecture
+
+![Security](https://rmnobarradev.blob.core.windows.net/rmnobarradev/security_logo.png)
 
 Security in a software system measures the ability to protect data and information from unauthorized access while ensuring access for authorized people and systems. This characteristic is crucial for the system's reliability and for maintaining user trust.
 
 Security can be characterized by three main aspects: confidentiality, integrity, and availability (CIA):
 
-Confidentiality: Ensures that data and services are protected from unauthorized access.
-Integrity: Ensures that data and services are not subject to unauthorized manipulation.
-Availability: Ensures that the system is available for legitimate use.
+**Confidentiality**: Ensures that data and services are protected from unauthorized access.
+
+**Integrity**: Ensures that data and services are not subject to unauthorized manipulation.
+
+**Availability**: Ensures that the system is available for legitimate use.
 
 ## Scenarios for Security
 
@@ -790,17 +861,17 @@ Security scenarios are used to describe situations and system responses to poten
 
 **Source of Stimulus**: The origin of the threat, such as a hacker or a malicious internal user.
 
-Stimulus: The action representing the threat, such as an unauthorized access attempt or malicious code injection.
+**Stimulus**: The action representing the threat, such as an unauthorized access attempt or malicious code injection.
 
-Environment: The context in which the threat occurs, such as the company's network or a public web server.
+**Environment**: The context in which the threat occurs, such as the company's network or a public web server.
 
-Artifact: The component of the system targeted by the threat, such as a database or a web service.
+**Artifact**: The component of the system targeted by the threat, such as a database or a web service.
 
-Response: The action taken by the system to handle the threat, such as blocking unauthorized access or logging the attack attempt.
+**Response**: The action taken by the system to handle the threat, such as blocking unauthorized access or logging the attack attempt.
 
-Response Measure: The metric used to evaluate the effectiveness of the response, such as the time required to detect and block the threat.
+**Response Measure**: The metric used to evaluate the effectiveness of the response, such as the time required to detect and block the threat.
 
-Use Case
+### Use Case
 
 An unhappy employee in a remote location attempts to improperly modify the salary rate table during normal operations. Unauthorized access is detected, the system maintains an audit trail, and correct data is restored within one day.
 
@@ -810,88 +881,91 @@ An unhappy employee in a remote location attempts to improperly modify the salar
 
 ![Security Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/security_tactics.png)
 
+Security tactics are design decisions that directly influence the system's ability to withstand attacks and maintain confidentiality, integrity, and availability (CIA). 
 
-Security tactics are design decisions that directly influence the system's ability to withstand attacks and maintain confidentiality, integrity, and availability (CIA). Security tactics can be divided into four main categories: detection, resistance, reaction, and recovery.
+Security tactics can be divided into four main categories: detection, resistance, reaction, and recovery.
 
-Detection:
+### Detection
 
-Detect Intrusion: Identify suspicious activities that may indicate an attack.
+**Detect Intrusion**: Identify suspicious activities that may indicate an attack.
 
-Detect Denial of Service: Monitor the system to identify and mitigate denial of service attacks.
+**Detect Denial of Service**: Monitor the system to identify and mitigate denial of service attacks.
 
-Authenticate Actors: Verify the identity of users and systems attempting to access the system.
+**Authenticate Actors**: Verify the identity of users and systems attempting to access the system.
 
-Authorize Actors: Verify if an authenticated user or system is permitted to perform a particular action.
+**Authorize Actors**: Verify if an authenticated user or system is permitted to perform a particular action.
 
-Detect Anomalies in Message Delivery: Monitor communication between system components to detect suspicious or modified messages.
+**Detect Anomalies in Message Delivery**: Monitor communication between system components to detect suspicious or modified messages.
 
-Resistance:
+### Resistance
 
-Resist Brute Force Attacks: Use mechanisms like strong passwords and login attempt limits to deter brute force attacks.
+**Resist Brute Force Attacks**: Use mechanisms like strong passwords and login attempt limits to deter brute force attacks.
 
-Use Encryption: Protect confidential data at rest and in transit using encryption algorithms.
+**Use Encryption**: Protect confidential data at rest and in transit using encryption algorithms.
 
-Minimize Attack Surface: Reduce the amount of code and system components exposed to potential attacks.
+**Minimize Attack Surface**: Reduce the amount of code and system components exposed to potential attacks.
 
-Separate Entities: Divide the system into isolated components to limit the impact of a potential attack.
+**Separate Entities**: Divide the system into isolated components to limit the impact of a potential attack.
 
-Reaction:
+### Reaction
 
-Block Access: Deny access to unauthorized users or systems.
+**Block Access**: Deny access to unauthorized users or systems.
 
-Log Security Events: Record suspicious events for later analysis and to help identify and mitigate future threats.
+**Log Security Events**: Record suspicious events for later analysis and to help identify and mitigate future threats.
 
-Alert Administrators: Notify system administrators about potential attacks or suspicious events.
+**Alert Administrators**: Notify system administrators about potential attacks or suspicious events.
 
-Recovery:
+### Recovery
 
-Restore Data: Recover lost or corrupted data due to an attack.
+**Restore Data**: Recover lost or corrupted data due to an attack.
 
-Restore Services: Re-establish interrupted services as quickly as possible after an attack.
+**Restore Services**: Re-establish interrupted services as quickly as possible after an attack.
 
-Maintain Audit Logs: Keep records of all actions performed on the system, including those by administrators, to assist in forensic investigations.
+**Maintain Audit Logs**: Keep records of all actions performed on the system, including those by administrators, to assist in forensic investigations.
 
 ## Security  Patterns
 
 Security patterns are reusable solutions for common security problems. They describe a general approach to protecting the system against a specific type of threat. Some common security patterns include:
 
-Two-Factor Authentication (2FA): Requires users to provide two forms of authentication, such as a password and a code sent to their phone, to access the system.
+**Two-Factor Authentication (2FA)**: Requires users to provide two forms of authentication, such as a password and a code sent to their phone, to access the system.
 
-Role-Based Access Control (RBAC): Defines different levels of access to the system based on user roles.
+**Role-Based Access Control (RBAC)**: Defines different levels of access to the system based on user roles.
 
-End-to-End Encryption: Protects data in transit, ensuring that only the intended sender and recipient can decrypt it.
+**End-to-End Encryption**: Protects data in transit, ensuring that only the intended sender and recipient can decrypt it.
 
-Web Application Firewall (WAF): A firewall that protects web applications from common attacks such as cross-site scripting (XSS) and SQL injection.
+**Web Application Firewall (WAF)**: A firewall that protects web applications from common attacks such as cross-site scripting (XSS) and SQL injection.
 
-Intrusion Detection System (IDS): A system that monitors network traffic for suspicious activities and generates alerts when something is detected.
+**Intrusion Detection System (IDS)**: A system that monitors network traffic for suspicious activities and generates alerts when something is detected.
 
 ## Practical Examples of Technologies, Tools, or Services
 
 Various technologies and tools can be used to implement the mentioned security patterns and tactics:
 
-Cloud:
+**AWS Security Hub**: Service that aggregates and analyzes security data from various AWS services, such as Amazon GuardDuty, Amazon Inspector, and AWS Firewall Manager.
 
-AWS Security Hub: Service that aggregates and analyzes security data from various AWS services, such as Amazon GuardDuty, Amazon Inspector, and AWS Firewall Manager.
-Azure Security Center: Unified cloud security platform that provides security monitoring, threat analysis, and security recommendations for Azure resources and hybrid environments.
-Google Cloud Security Command Center: Platform that provides unified visibility and control over Google Cloud's security posture, including threat detection, vulnerability management, and security policy management.
-Open Source:
+**Azure Security Center**: Unified cloud security platform that provides security monitoring, threat analysis, and security recommendations for Azure resources and hybrid environments.
 
-Snort: Network intrusion detection system (NIDS) used to detect attacks and malicious activities in real-time.
-OpenVPN: Open-source VPN solution that can create secure connections between networks and devices.
-Ossec: Host-based intrusion detection system (HIDS) used to monitor log files, file integrity, and system activities for evidence of malicious activities.
-Keycloak: Open-source identity and access management platform supporting standard protocols like OpenID Connect, OAuth 2.0, and SAML 2.0.
-On-Premises:
+**Google Cloud Security Command Center**: Platform that provides unified visibility and control over Google Cloud's security posture, including threat detection, vulnerability management, and security policy management.
 
-Splunk: Data analysis and security monitoring platform used to aggregate, analyze, and visualize security data from various sources.
-Cisco ASA: Next-generation firewall offering advanced security features such as intrusion prevention, URL filtering, and VPN.
-Microsoft Active Directory: Directory service providing identity and access management for Windows networks.
-Other Tools and Technologies:
+**Snort**: Network intrusion detection system (NIDS) used to detect attacks and malicious activities in real-time.
 
-Hashicorp Vault: Secrets management tool used to securely store and access confidential information such as passwords, certificates, and API keys.
-OWASP ZAP: Open-source penetration testing tool used to identify security vulnerabilities in web applications.
-Burp Suite: Web application penetration testing platform providing a wide range of tools for testing web application security.
+**OpenVPN**: Open-source VPN solution that can create secure connections between networks and devices.
+
+**Ossec**: Host-based intrusion detection system (HIDS) used to monitor log files, file integrity, and system activities for evidence of malicious activities.
+
+**Keycloak**: Open-source identity and access management platform supporting standard protocols like OpenID Connect, OAuth 2.0, and SAML 2.0.
+
+**Splunk**: Data analysis and security monitoring platform used to aggregate, analyze, and visualize security data from various sources.
+
+**Cisco ASA**: Next-generation firewall offering advanced security features such as intrusion prevention, URL filtering, and VPN.
+
+**Microsoft Active Directory**: Directory service providing identity and access management for Windows networks.
+
+**Hashicorp Vault**: Secrets management tool used to securely store and access confidential information such as passwords, certificates, and API keys.
 
 ## Testability in Software Architecture
+
+![Testability](https://rmnobarradev.blob.core.windows.net/rmnobarradev/testability_logo.png)
 
 Testability refers to the ease with which defects in software can be demonstrated through tests, typically based on execution. A well-defined software architecture can reduce development costs by making testing easier, more efficient, and more effective.
 
@@ -899,7 +973,26 @@ Testability refers to the ease with which defects in software can be demonstrate
 
 A common scenario for testability involves a developer who, upon completing a unit of code, runs a sequence of tests. The effectiveness of these tests, measured by code coverage and the time required for execution, determines the software’s testability.
 
-Use Case:
+Scenario:
+
+**Stimulus Source**: Vehicle tracking system development team.
+
+**Stimulus**: Completion of the implementation of a new software module in the tracking system, responsible for recording and analyzing driver behavior related to harsh braking and sudden acceleration.
+
+**Environment**: Development and testing environment, using a simulator that replicates vehicle and sensor behavior.
+
+**Artifact**: The newly implemented software module, which integrates with the existing tracking system.
+
+**Response**: The development team uses a testing framework that injects simulated data into the new module, simulating different driving scenarios (harsh braking, sudden accelerations, sharp turns). The framework allows control of the module's inputs (sensor data) and monitors its outputs (generated alerts, telemetry data).
+
+**Response Measure**:
+
+* **Code Coverage**: The testing framework measures the percentage of lines of code in the new module exercised during tests, aiming for high coverage to ensure software quality.
+* **Number of Defects Found**: The framework records and classifies defects found during testing, allowing the development team to fix them before production deployment.
+* **Test Execution Time**: Short execution time for tests enables faster development cycles, facilitating continuous integration and continuous delivery (CI/CD).
+* **Ease of Replicating Failures**: The testing framework should allow easy reproduction of specific scenarios that caused failures in the new module, aiding in debugging and error correction.
+
+### Use Case
 
 ![Testability Cenario](https://rmnobarradev.blob.core.windows.net/rmnobarradev/testability_cenario.png)
 
@@ -911,47 +1004,50 @@ The developer completes a unit of code during development and runs a sequence of
 
 Tactics for increasing testability can be divided into two main categories:
 
-Control and Observation of the System State:
+### Control and Observation of the System State
 
-Specialized Interfaces: Allow testers to control and observe the internal state of a component.
+**Specialized Interfaces**: Allow testers to control and observe the internal state of a component.
 
-Logging/Replay: Enables the reproduction of specific test scenarios by recording and replaying interactions with the system.
+**Logging/Replay**: Enables the reproduction of specific test scenarios by recording and replaying interactions with the system.
 
-Locate State Storage: Facilitates observation and manipulation of the system state by isolating data storage.
+**Locate State Storage**: Facilitates observation and manipulation of the system state by isolating data storage.
 
-Abstract Data Sources: Replaces real data sources with controlled alternatives for testing.
+**Abstract Data Sources**: Replaces real data sources with controlled alternatives for testing.
 
-Sandbox: Allows isolated testing by replicating a controlled production environment.
+**Sandbox**: Allows isolated testing by replicating a controlled production environment.
 
-Executable Assertions: Incorporates checks into the code to identify failure states during execution.
+**Executable Assertions**: Incorporates checks into the code to identify failure states during execution.
 
-Limit Complexity:
+### Limit Complexity
 
-Limit Structural Complexity: Reduces the complexity of the system, making it easier to understand and test individual components.
+**Limit Structural Complexity**: Reduces the complexity of the system, making it easier to understand and test individual components.
 
-Limit Non-Determinism: Reduces unpredictable system behavior, facilitating the reproduction and testing of scenarios.
+**Limit Non-Determinism**: Reduces unpredictable system behavior, facilitating the reproduction and testing of scenarios.
 
 ## Testability Patterns
 
-Strategy Pattern: Allows the replacement of algorithms or behaviors at runtime, making it easier to test different implementations.
+**Strategy Pattern**: Allows the replacement of algorithms or behaviors at runtime, making it easier to test different implementations.
 
-Observer Pattern: Notifies testers about changes in the system state, facilitating the observation of system behavior during tests.
-MVC (Model-View-Controller): The clear separation between data (Model), user interface (View), and business logic (Controller) simplifies the 
+**Observer Pattern**: Notifies testers about changes in the system state, facilitating the observation of system behavior during tests.
+
+**MVC (Model-View-Controller)**: The clear separation between data (Model), user interface (View), and business logic (Controller) simplifies the 
 testability of each component.
 
 ## Practical Examples of Technologies, Tools, or Services for Testability
 
-JUnit (On-Premises/Open Source): A framework for writing and running automated tests in Java. Supports creating isolated test environments (Sandbox) and implementing executable assertions.
+**JUnit**: A framework for writing and running automated tests in Java. Supports creating isolated test environments (Sandbox) and implementing executable assertions.
 
-Mockito (On-Premises/Open Source): A library for creating mock objects in Java, useful for abstracting external dependencies during testing.
+**Mockito**: A library for creating mock objects in Java, useful for abstracting external dependencies during testing.
 
-Selenium (On-Premises/Open Source): A tool for automating user interface tests in web browsers. Allows recording and replaying user interactions (Recording/Reproduction).
+**Selenium**: A tool for automating user interface tests in web browsers. Allows recording and replaying user interactions (Recording/Reproduction).
 
-Docker (Cloud/On-Premises/Open Source): A platform for creating, deploying, and running applications in containers. Facilitates creating isolated test environments (Sandbox) that mirror the production environment.
+**Docker**: A platform for creating, deploying, and running applications in containers. Facilitates creating isolated test environments (Sandbox) that mirror the production environment.
 
-Kubernetes (Cloud/On-Premises/Open Source): A container orchestration system that automates deployment, scaling, and management of containerized applications. Useful for deploying and managing complex test environments.
+**Kubernetes**: A container orchestration system that automates deployment, scaling, and management of containerized applications. Useful for deploying and managing complex test environments.
 
 ## Usability in Software Architecture
+
+![Usability](https://rmnobarradev.blob.core.windows.net/rmnobarradev/usability_logo.png)
 
 Usability refers to how easily a user can perform a desired task using a system and the support provided during interaction. A system with high usability is intuitive, easy to learn, and pleasant to use.
 
@@ -959,9 +1055,25 @@ Usability refers to how easily a user can perform a desired task using a system 
 
 The general usability scenario involves a user interacting with a system to achieve a specific goal. Usability is measured by the effectiveness, efficiency, and satisfaction of the user during this interaction.
 
-Example Usability Scenario: A user wants to buy a product from an online store. The system should allow the user to find the desired product, add it to the cart, and complete the purchase quickly, easily, and intuitively.
+**Example Usability Scenario**: A user wants to buy a product from an online store. The system should allow the user to find the desired product, add it to the cart, and complete the purchase quickly, easily, and intuitively.
 
-Use Case
+**Stimulus Source**: A logistics manager needs to set up a new alert in the tracking system to notify them when a vehicle enters a specific area on the map, indicating a potential unauthorized delivery.
+
+**Stimulus**: The logistics manager wants to configure the new alert quickly and intuitively, without the need to consult complex manuals or tutorials.
+
+**Environment**: The logistics manager is using a responsive web interface to access the tracking system from their desktop computer.
+
+**Artifact**: The web interface of the vehicle tracking system.
+
+**Response**: The web interface of the tracking system provides an alert configuration wizard with a user-friendly graphical interface. The wizard guides the logistics manager through simple steps: selecting the type of alert ("geofence alert"), drawing the area on the map using an intuitive drawing tool, setting the alert parameters (monitored vehicles, activation times), and naming the alert.
+
+**Response Measure**:
+
+* **Time to Configure the Alert**: The logistics manager should be able to set up the new alert in less than 5 minutes without assistance.
+* **Number of Errors During Configuration**: The logistics manager should be able to configure the alert making fewer than 2 errors.
+* **User Satisfaction**: After setting up the alert, the system prompts the manager to rate their experience using a usability scale, with options ranging from "very difficult" to "very easy."
+
+### Use Case
 
 The user downloads a new app and uses it productively after 2 minutes of experimentation.
 
@@ -971,33 +1083,33 @@ The user downloads a new app and uses it productively after 2 minutes of experim
 
 ![Usability Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/usability_tactics.png)
 
-Maintain a Task Model: Understand the tasks users want to perform with the system.
+**Maintain a Task Model**: Understand the tasks users want to perform with the system.
 
-Maintain a User Model: Create personas and use cases to represent different types of users and their needs.
+**Maintain a User Model**: Create personas and use cases to represent different types of users and their needs.
 
-Maintain a System Model: Ensure that the user interface accurately represents the user's mental model of the system.
+**Maintain a System Model**: Ensure that the user interface accurately represents the user's mental model of the system.
 
-Provide Clear and Concise Feedback: Keep users informed about the system's status and the progress of their tasks.
+**Provide Clear and Concise Feedback**: Keep users informed about the system's status and the progress of their tasks.
 
-Prevent Errors: Eliminate or minimize the possibility of user errors through intuitive design and input validation.
+**Prevent Errors**: Eliminate or minimize the possibility of user errors through intuitive design and input validation.
 
-Provide Help and Documentation: Offer users easy access to useful information about the system, such as tutorials and FAQs.
+**Provide Help and Documentation**: Offer users easy access to useful information about the system, such as tutorials and FAQs.
 
 ## Usability Patterns
 
-MVC (Model-View-Controller): Separates business logic from the user interface, making the system easier to modify and test.
+**MVC (Model-View-Controller)**: Separates business logic from the user interface, making the system easier to modify and test.
 
-Observer Pattern: Allows objects to notify other objects about state changes, facilitating real-time updates to the user interface.
+**Observer Pattern**: Allows objects to notify other objects about state changes, facilitating real-time updates to the user interface.
 
-Memento Pattern: Allows saving and restoring the previous state of an object, useful for implementing functionalities like "undo" and "redo."
+**Memento Pattern**: Allows saving and restoring the previous state of an object, useful for implementing functionalities like "undo" and "redo."
 
 ## Practical Examples of Technologies and Tools for Usability
 
-Front-End Frameworks (React, Angular, Vue.js): Facilitate building interactive and responsive user interfaces, implementing the MVC pattern.
+**Front-End Frameworks (React, Angular, Vue.js)**: Facilitate building interactive and responsive user interfaces, implementing the MVC pattern.
 
-Prototyping Tools (Figma, Adobe XD): Allow the creation of interactive prototypes to test the usability of the user interface before development.
+**Prototyping Tools (Figma, Adobe XD)**: Allow the creation of interactive prototypes to test the usability of the user interface before development.
 
-State Management Libraries (Redux, MobX): Assist in implementing the Observer Pattern, making it easier to update the user interface in response to changes in application state.
+**State Management Libraries (Redux, MobX)**: Assist in implementing the Observer Pattern, making it easier to update the user interface in response to changes in application state.
 
 ## Conclusions
 
