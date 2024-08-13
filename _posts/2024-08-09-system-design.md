@@ -1171,7 +1171,7 @@ And finally, some say that Software Architecture is the "art of taming complexit
 
 ## Useful links
 
-If you came across this article through a presentation, you can find the presentation deck [here](https://rmnobarradev.blob.core.windows.net/rmnobarradev/lighting-address.png)
+If you came across this article through a presentation, you can find the presentation deck [here](https://rmnobarradev.blob.core.windows.net/rmnobarradev/consideracoes_sobre_system_design.pdf)
 
 ## References
 
