@@ -453,7 +453,11 @@ A new version of an authentication/authorization service (which our product uses
 
 ![Deployability Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/deployability_tactics.png)
 
-The tactics for deployability aim to ensure that new software or hardware components are deployed within acceptable constraints of time, cost, and quality. Here are some tactics:
+The tactics for deployability aim to ensure that new software or hardware components are deployed within acceptable constraints of time, cost, and quality.
+
+The deployment pipeline management tactics focus on how software is moved from development to production.
+
+The deployment system management tactics focus on how to manage a system both during its deployment and after it has been deployed.
 
 **Minimize Dependencies**: Reducing dependencies between system components simplifies the deployment process and lowers the risk of compatibility issues.
 
@@ -530,7 +534,11 @@ maintaining a worst-case latency of 2 seconds for database queries, achieving an
 
 ![Energy Efficiency Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/energy_efficiency_tactics.png)
 
-Various tactics inspired by other areas, such as performance and availability, can be adapted for energy efficiency:
+**Monitor Resources**: You cannot manage what you cannot measure, so energy efficiency tactics start with monitoring resources.
+
+**Allocate Resources**: Resource allocation means assigning resources to work in a way that is mindful of energy consumption.
+
+**Reduce Resource Demand** Manage the arrival and response to events, prioritize events by leaving some low-priority ones unaddressed, reduce computational overhead, limit execution times, and optimize resource usage efficiency, with the common goal of doing less work and thus saving energy.
 
 **Resource Management**: Monitoring and controlling the use of resources like CPU, memory, disk, and network.
 
@@ -602,7 +610,19 @@ A new data filtering component has become available on the component market. The
 
 ![Integrability Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/integrability_tactics.png)
 
-The tactics for integrability aim to minimize the challenges of connecting different software components, focusing on:
+The tactics for integrability aim to minimize the challenges of connecting different software components.
+
+Limit Dependencies
+
+Aim to reduce the number of dependencies between a component being integrated (C) and the system into which it is being integrated (S).
+
+Adapt
+
+Deal with resolving differences between C and S. There are three tactics in this category:
+
+Coordinate
+
+Aim to integrate components that were not designed to work together or may not be aware of each other's existence.
 
 **Minimize Dependencies**: Limit dependencies between components to reduce the impact of changes and promote reuse.
 
@@ -732,6 +752,8 @@ latency of two seconds.
 
 Performance tactics are design strategies used to ensure that a system can respond quickly and handle large volumes of data, such as:
 
+**Manage Resources**: Even if the demand for resources cannot be controlled, the management of these resources can be. Sometimes, one resource can be substituted for another. For example, intermediate data can be kept in a cache or regenerated depending on which resources are most critical: time, space, or network bandwidth.
+
 **Manage Contended Resources**: Limit the use of shared resources like databases and queues to minimize wait times and bottlenecks.
 
 **Use Resources Effectively**: Reduce resource consumption through techniques such as caching, optimized algorithms, and data compression.
@@ -803,6 +825,15 @@ An example of a security scenario is: A sensor in the patient monitoring system 
 ## Tactics for Safety:
 
 ![Safety Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/safety_tactics.png)
+
+**Preventing Unsafe States**: Focuses on preventing the system from entering a potentially dangerous state.
+
+**Detecting Unsafe States**: Even with preventive measures, early detection of unsafe states is crucial.
+
+**Containment**: Containment tactics limit the impact of failures by preventing their spread and allowing the system to continue operating, possibly with reduced functionality.
+
+**Recovery**: After detecting and containing an unsafe state, recovery tactics restore the system to a stable and consistent operational state.
+
 
 ### Prevention of Unsafe States:
 
@@ -884,6 +915,14 @@ An unhappy employee in a remote location attempts to improperly modify the salar
 Security tactics are design decisions that directly influence the system's ability to withstand attacks and maintain confidentiality, integrity, and availability (CIA). 
 
 Security tactics can be divided into four main categories: detection, resistance, reaction, and recovery.
+
+**Detecting Attacks**: The first line of defense in mitigating security threats.
+
+**Resisting Attacks**: The next line of defense is to withstand the attack and prevent it from exploiting system vulnerabilities.
+
+**Responding to Attacks**: A timely and effective response is vital to mitigating the damage caused by an attack.
+
+**Recovering from Attacks**: After a security incident, it is crucial to restore the system to a secure operational state and recover any lost or compromised data.
 
 ### Detection
 
@@ -973,8 +1012,6 @@ Testability refers to the ease with which defects in software can be demonstrate
 
 A common scenario for testability involves a developer who, upon completing a unit of code, runs a sequence of tests. The effectiveness of these tests, measured by code coverage and the time required for execution, determines the software’s testability.
 
-Scenario:
-
 **Stimulus Source**: Vehicle tracking system development team.
 
 **Stimulus**: Completion of the implementation of a new software module in the tracking system, responsible for recording and analyzing driver behavior related to harsh braking and sudden acceleration.
@@ -1003,6 +1040,10 @@ The developer completes a unit of code during development and runs a sequence of
 ![Testability Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/testability_tactics.png)
 
 Tactics for increasing testability can be divided into two main categories:
+
+**Controlling and Observing of System State**: Focuses on making the system's behavior more transparent and manageable during testing.
+
+**Limiting Complexity**: Complex systems are inherently difficult to test due to the large number of possible states and interactions between components.
 
 ### Control and Observation of the System State
 
@@ -1083,6 +1124,10 @@ The user downloads a new app and uses it productively after 2 minutes of experim
 
 ![Usability Tactics](https://rmnobarradev.blob.core.windows.net/rmnobarradev/usability_tactics.png)
 
+**User-Initiated Support**: Focuses on providing users with the tools to interact with the system efficiently and intuitively, responding to their actions and allowing for error correction.
+
+**System-Initiated Support**: The system takes a more proactive role, using models to predict user behavior and provide assistance or feedback.
+
 **Maintain a Task Model**: Understand the tasks users want to perform with the system.
 
 **Maintain a User Model**: Create personas and use cases to represent different types of users and their needs.
@@ -1126,7 +1171,7 @@ And finally, some say that Software Architecture is the "art of taming complexit
 
 ## Useful links
 
-If you see this article by some apresentation, follow the apresentation deck [here](https://rmnobarradev.blob.core.windows.net/rmnobarradev/lighting-address.png)
+If you came across this article through a presentation, you can find the presentation deck [here](https://rmnobarradev.blob.core.windows.net/rmnobarradev/lighting-address.png)
 
 ## References
 
