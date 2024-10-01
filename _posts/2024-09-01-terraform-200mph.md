@@ -35,8 +35,6 @@ The documentation goes beyond a simple list of commands and options. Instead, it
 * **Complete Command Reference:** Detailed information about each command, including options and flags.
 * **Practical Examples:** Real-world use cases demonstrating how to implement various resources across different cloud providers, such as AWS, Azure, and Google Cloud.
 
-Aqui está a tradução em formato markdown:
-
 ## HCL Language
 
 The primary purpose of the HCL language is to declare infrastructure in a declarative way, and one or more `.tf` files, which form a Terraform project, serve to instruct the Terraform binary on how to manage the declared infrastructure.
@@ -249,7 +247,7 @@ provider "aws" {
 }
 ```
 
-Agora o resource para o s3:
+Now s3 resource:
 
 ```hcl
 resource "aws_s3_bucket" "terraform_state" {
@@ -262,7 +260,7 @@ resource "aws_s3_bucket" "terraform_state" {
 }
 ```
 
-Now, versioning ensures that a new state file is created with each execution:
+Versioning ensures that a new state file is created with each execution:
 
 ```hcl
 resource "aws_s3_bucket_versioning" "enabled" {
