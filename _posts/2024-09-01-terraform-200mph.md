@@ -212,8 +212,6 @@ While local use of the state file works well for personal projects, collaborativ
 
 * **Environment Isolation:** To prevent changes in development or test environments from affecting production, it's necessary to isolate the state files for each environment. This ensures that errors in one environment do not impact others.
 
-Aqui está a tradução em formato markdown:
-
 ## Remote State with Remote Backends
 
 The use of remote backends in Terraform is an effective solution to address common issues associated with storing and managing state files locally. Remote backends allow the state file to be stored in a centralized and shared location, offering benefits such as eliminating manual errors, support for locking, and secret protection.
@@ -225,8 +223,6 @@ The use of remote backends in Terraform is an effective solution to address comm
 * **Secret Protection:** Another crucial benefit of remote backends is security. Most of them support encryption in transit and at rest, ensuring that the state file is protected during transmission and while stored. Additionally, many backends, such as Amazon S3, allow access permissions to be configured through IAM policies, ensuring that only authorized individuals can access the state and any secrets it contains.
 
 Although Terraform does not yet natively support encrypting secrets directly within the state file, the use of remote backends significantly mitigates security concerns, as the state is no longer stored in plain text on a local disk.
-
-Aqui está a tradução em formato markdown:
 
 ### Main Examples of Remote Backends
 
