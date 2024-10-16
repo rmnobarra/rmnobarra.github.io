@@ -10,9 +10,33 @@ tags: [terraform]
 
 Terraform is an open-source tool developed by HashiCorp, written in Go, and distributed as a single binary for the main operating systems. This binary, simply called terraform, can be run directly on any machine, whether it's a personal laptop, a CI/CD server, or any other environment, without the need to install or manage additional infrastructure for its execution.
 
+There are many tutorials and documentation on the internet—some easy, some difficult, and others too complex to grasp.
+
+The main goal of this article is to demystify Terraform because:
+
+- I believe this tool should be easy to use and understand. If it’s not, maybe something isn’t right.
+- Terraform is AWESOME!
+
+In this article, I’ve included 10 topics that, if you understand each one, Terraform will no longer seem complex to you.
+
+The topics are:
+
+1. How terraform works
+2. Documentation
+3. HCL Language
+4. Terraform State
+5. Remote State
+6. Workspaces
+7. Variables
+8. Style Guide
+9. Loops
+10. Modules
+
+Let' go!
+
 ![terraform 200mph](https://rmnobarradev.blob.core.windows.net/rmnobarradev/terraform-200mph.png)
 
-## How Terraform Works
+## 1. How Terraform Works
 
 Behind the scenes, Terraform makes API calls to cloud providers such as AWS, Azure, Google Cloud, DigitalOcean, OpenStack, among others. These calls allow Terraform to interact directly with the existing infrastructure in these providers, leveraging native authentication mechanisms like API keys, IAM permissions, or credential-based authentication that you already have in place.
 
@@ -25,7 +49,7 @@ Terraform operates in a declarative manner, meaning you define the desired state
 
 This simplicity, combined with its ability to interact with multiple providers transparently, makes Terraform a powerful tool for managing infrastructures in a unified, predictable, and efficient manner.
 
-## Documentation
+## 2. Documentation
 
 The official Terraform documentation is not just a list of commands and options. It also provides examples, best practices, and a detailed view of each provider's resources, making it an invaluable tool for implementing IaC efficiently and securely.
 
@@ -35,7 +59,7 @@ The documentation goes beyond a simple list of commands and options. Instead, it
 * **Complete Command Reference:** Detailed information about each command, including options and flags.
 * **Practical Examples:** Real-world use cases demonstrating how to implement various resources across different cloud providers, such as AWS, Azure, and Google Cloud.
 
-## HCL Language
+## 3. HCL Language
 
 The primary purpose of the HCL language is to declare infrastructure in a declarative way, and one or more `.tf` files, which form a Terraform project, serve to instruct the Terraform binary on how to manage the declared infrastructure.
 
@@ -194,7 +218,7 @@ resource "aws_s3_bucket" "example" {
 }
 ```
 
-## Terraform State
+## 4. Terraform State
 
 The **state** is a central component in Terraform's operation, responsible for tracking the managed infrastructure. Each time Terraform is executed, it stores information about the provisioned resources in a state file called `terraform.tfstate`. This file is generated in the directory where Terraform is run and contains a mapping between the resources defined in the configuration files and their real-world representations. The format of this file is a custom JSON, and it allows Terraform to know the current state of the infrastructure in order to determine what changes need to be made.
 
@@ -214,7 +238,7 @@ While local use of the state file works well for personal projects, collaborativ
 
 Aqui está a tradução em formato markdown:
 
-## Remote State with Remote Backends
+## 5. Remote State with Remote Backends
 
 The use of remote backends in Terraform is an effective solution to address common issues associated with storing and managing state files locally. Remote backends allow the state file to be stored in a centralized and shared location, offering benefits such as eliminating manual errors, support for locking, and secret protection.
 
@@ -480,7 +504,7 @@ terraform init -backend-config=backend.hcl
   
 * **Fixed Backend Version:** Since the backend configuration cannot be dynamically altered using variables, it's important to carefully define and document the parameters used for each environment and module to avoid inconsistencies.
 
-## Workspaces
+## 6. Workspaces
 
 Workspaces in Terraform are a feature that allows managing different states for the same infrastructure configuration. They are useful for separating environments, such as development, testing, and production, using the same code. Instead of creating multiple duplicated configurations for each environment, workspaces enable you to reuse the same codebase while maintaining separate states in an organized manner.
 
@@ -662,7 +686,7 @@ Remove the specified workspace. Attention: this deletes the associated state fil
 * **Workspaces do not replace Git branches:** It’s important to remember that workspaces manage only the state, while Terraform configuration code should be managed by version control systems like Git. Use Git branches to control code versions, while workspaces are used to manage environment states.
 * **Careful use of variables:** Ensure your Terraform configurations are adaptable to different workspaces by using appropriate variables, such as `terraform.workspace`, to conditionally set values based on the active workspace. This helps avoid provisioning incorrect resources in the wrong environment.
 
-## Variables
+## 7. Variables
 
 Variables in Terraform are essential elements for making configurations more dynamic and reusable. They allow you to easily change infrastructure parameters without directly modifying the configuration code. In this section, we will cover concepts, variable precedence, best practices, related commands, and useful tips for using variables efficiently in Terraform.
 
@@ -738,7 +762,7 @@ variable "example_variable" {
 }
 ```
 
-## Style Guide
+## 8. Style Guide
 
 A style guide aims to standardize how code is written, ensuring it is readable, scalable, and easy to maintain. For Terraform, following certain best practices can help organize and structure files and directories while facilitating team collaboration.
 
@@ -839,7 +863,7 @@ output "instance_ip" {
 }
 ```
 
-## Loops
+## 9. Loops
 
 Terraform, as a declarative language, provides a clear view of the desired state of infrastructure. However, a feature of declarative languages is the absence of traditional control flow structures like for-loops. Nevertheless, Terraform offers alternatives to efficiently perform loops and conditions using the `count` meta-parameter, the `for_each` expression, and `for` expressions. These tools allow for creating multiple resources, applying repeated blocks, and processing lists or maps dynamically.
 
@@ -994,7 +1018,7 @@ In this example, the `for` expression creates a map pairing container names with
 * **for_each:** Use when you need more control over the loop, especially when iterating over sets or maps. This allows creating multiple resources based on more complex collections.
 * **For expressions:** These are useful for manipulating lists or maps or applying transformations before passing data to another resource.
 
-## Modules
+## 10 .Modules
 
 Modules in Terraform are one of the key features that make infrastructure as code (IaC) more reusable, organized, and scalable. By dividing configuration into reusable blocks, modules allow you to create, maintain, and share infrastructure configurations efficiently.
 
