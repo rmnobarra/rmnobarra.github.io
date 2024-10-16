@@ -250,8 +250,6 @@ The use of remote backends in Terraform is an effective solution to address comm
 
 Although Terraform does not yet natively support encrypting secrets directly within the state file, the use of remote backends significantly mitigates security concerns, as the state is no longer stored in plain text on a local disk.
 
-Aqui está a tradução em formato markdown:
-
 ### Main Examples of Remote Backends
 
 Some of the most commonly used remote backends in Terraform include:
