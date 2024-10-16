@@ -21,16 +21,16 @@ In this article, I’ve included 10 topics that, if you understand each one, Ter
 
 The topics are:
 
-1. How terraform works
-2. Documentation
-3. HCL Language
-4. Terraform State
-5. Remote State
-6. Workspaces
-7. Variables
-8. Style Guide
-9. Loops
-10. Modules
+1. [How Terraform Works](#1-how-terraform-works)
+2. [Documentation](#2-documentation)
+3. [HCL Language](#3-hcl-language)
+4. [Terraform State](#4-terraform-state)
+5. [Remote State](#5-remote-state-with-remote-backends)
+6. [Workspaces](#6-workspaces)
+7. [Variables](#7-variables)
+8. [Style Guide](#8-style-guide)
+9. [Loops](#9-loops)
+10. [Modules](#10-modules)
 
 Let' go!
 
